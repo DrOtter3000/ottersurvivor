@@ -39,12 +39,12 @@ Your feedback and support are crucial to the development of **Otter Survivor**! 
 - **Play the Game:** The more you play, the more you can help identify bugs and suggest improvements.
 - **Spread the Word:** Tell your friends, share the game on social media, and help grow the community.
 - **Report Issues:** If you encounter any bugs or have ideas for new features, please open an issue on the game's GitHub repository.
-- **Follow for Updates:** Stay informed about updates and new features by following me on [Mastodon](#), [Bluesky](#), or [Twitter/X](#).
+- **Follow for Updates:** Stay informed about updates and new features by following me on [Mastodon](https://mastodon.gamedev.place/@drotter3000), [Bluesky](https://bsky.app/profile/drotter3000.darknet-online.com), or [Twitter/X](https://x.com/DrOtter3000).
 
 ## Contact and Updates
 To stay up-to-date on the latest news about **Otter Survivor**, follow me on:
-- **Mastodon:** [Your Mastodon Handle]
-- **Bluesky:** [Your Bluesky Handle]
-- **Twitter/X:** [Your Twitter/X Handle]
+- **Mastodon:** [https://mastodon.gamedev.place/@drotter3000]
+- **Bluesky:** [https://bsky.app/profile/drotter3000.darknet-online.com]
+- **Twitter/X:** [https://x.com/DrOtter3000]
 
 Thank you for playing **Otter Survivor**! Your support and feedback are greatly appreciated. Let's protect those feesh together!
