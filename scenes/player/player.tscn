@@ -18,3 +18,7 @@ offset = Vector2(0, -7)
 position = Vector2(0.375, -6.625)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_8ir84")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
