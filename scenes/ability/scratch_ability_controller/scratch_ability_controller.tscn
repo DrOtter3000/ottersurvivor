@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c42n8wyo8hgel"]
+
+[ext_resource type="Script" path="res://scenes/ability/scratch_ability_controller/scratch_ability_controller.gd" id="1_gwqpi"]
+[ext_resource type="PackedScene" uid="uid://c33a3ojhnfw30" path="res://scenes/ability/scratch/scratch_ability.tscn" id="2_p0fth"]
+
+[node name="ScratchAbilityController" type="Node"]
+script = ExtResource("1_gwqpi")
+scratch_ability = ExtResource("2_p0fth")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
