@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwu1fexk2f0bp"]
+[gd_scene load_steps=5 format=3 uid="uid://bwu1fexk2f0bp"]
 
 [ext_resource type="Script" path="res://scenes/duck/duck.gd" id="1_2muum"]
 [ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/duck/Duck.png" id="1_4getp"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_k548t"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_pruxb"]
-radius = 8.7185
+radius = 6.0
 
 [node name="Duck" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 0
 script = ExtResource("1_2muum")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_k548t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4getp")
@@ -17,3 +27,5 @@ offset = Vector2(0, -6)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_pruxb")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

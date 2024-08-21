@@ -1,6 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://c33a3ojhnfw30"]
+[gd_scene load_steps=6 format=3 uid="uid://c33a3ojhnfw30"]
 
 [ext_resource type="Texture2D" uid="uid://bmsdion01nmad" path="res://scenes/ability/scratch/Scratch.png" id="1_gp4fg"]
+
+[sub_resource type="Animation" id="Animation_gsq42"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
 
 [sub_resource type="Animation" id="Animation_8vc1e"]
 resource_name = "default"
@@ -32,26 +47,14 @@ tracks/1/keys = {
 }]
 }
 
-[sub_resource type="Animation" id="Animation_gsq42"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_d07eb"]
 _data = {
 "RESET": SubResource("Animation_gsq42"),
 "default": SubResource("Animation_8vc1e")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_auu7u"]
+radius = 10.0203
 
 [node name="ScratchAbility" type="Node2D"]
 
@@ -63,3 +66,10 @@ libraries = {
 "": SubResource("AnimationLibrary_d07eb")
 }
 autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_auu7u")
