@@ -11,6 +11,7 @@ radius = 6.0
 [node name="Duck" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 8
 collision_mask = 9
+motion_mode = 1
 script = ExtResource("1_2muum")
 
 [node name="Area2D" type="Area2D" parent="."]
