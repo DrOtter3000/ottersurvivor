@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhboyxf4gdyp8"]
+[gd_scene load_steps=6 format=3 uid="uid://dhboyxf4gdyp8"]
 
 [ext_resource type="Texture2D" uid="uid://cxqr02vhderoi" path="res://scenes/game_object/player/Player.png" id="1_62rs6"]
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_s5kjg"]
 [ext_resource type="PackedScene" uid="uid://c42n8wyo8hgel" path="res://scenes/ability/scratch_ability_controller/scratch_ability_controller.tscn" id="2_f28a0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0k7g3"]
+radius = 32.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ir84"]
 radius = 4.375
@@ -17,6 +20,14 @@ script = ExtResource("1_s5kjg")
 [node name="AbilityManager" type="Node" parent="."]
 
 [node name="ScratchAbilityController" parent="AbilityManager" instance=ExtResource("2_f28a0")]
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_0k7g3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_62rs6")
