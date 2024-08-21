@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxqr02vhderoi"
-path="res://.godot/imported/Player.png-8ad42eba33f7301a5cbe31f95d76a1ed.ctex"
+uid="uid://0v5virrbcxcq"
+path="res://.godot/imported/Duck.png-e76a7c499b4c4d8ea4bb265d38a9de47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/player/Player.png"
-dest_files=["res://.godot/imported/Player.png-8ad42eba33f7301a5cbe31f95d76a1ed.ctex"]
+source_file="res://scenes/game_object/duck/Duck.png"
+dest_files=["res://.godot/imported/Duck.png-e76a7c499b4c4d8ea4bb265d38a9de47.ctex"]
 
 [params]
 

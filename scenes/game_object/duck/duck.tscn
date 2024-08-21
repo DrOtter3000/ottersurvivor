@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bwu1fexk2f0bp"]
 
-[ext_resource type="Script" path="res://scenes/duck/duck.gd" id="1_2muum"]
-[ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/duck/Duck.png" id="1_4getp"]
+[ext_resource type="Script" path="res://scenes/game_object/duck/duck.gd" id="1_2muum"]
+[ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/game_object/duck/Duck.png" id="1_4getp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k548t"]
 
