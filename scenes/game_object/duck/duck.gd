@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 const MAX_SPEED = 75
 
+@onready var health_component: Node = $HealthComponent
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -18,4 +20,4 @@ func get_direction_to_player():
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	queue_free()
+	health_component.damage(100)

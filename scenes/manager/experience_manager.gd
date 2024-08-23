@@ -14,4 +14,3 @@ func increment_experience(number: float):
 
 func on_clam_collected(number: float):
 	increment_experience(number)
-	print("here")

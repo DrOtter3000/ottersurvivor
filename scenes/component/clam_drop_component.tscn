@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://c7ynmg4eoar8m"]
+
+[ext_resource type="Script" path="res://scenes/component/clam_drop_component.gd" id="1_fier6"]
+[ext_resource type="PackedScene" uid="uid://mdfot0xp45w0" path="res://scenes/game_object/clam/clam.tscn" id="2_jatri"]
+
+[node name="ClamDropComponent" type="Node"]
+script = ExtResource("1_fier6")
+clam_scene = ExtResource("2_jatri")
