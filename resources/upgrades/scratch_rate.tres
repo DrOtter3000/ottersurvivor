@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://drmvg6umju3kx"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_h5jj0"]
+
+[resource]
+script = ExtResource("1_h5jj0")
+id = "scratch_rate"
+name = "More Scratchies"
+description = "Otter scratches faster, perhaps faster than any other otter before him!"
