@@ -4,6 +4,8 @@ const MAX_RANGE = 150
 
 @export var scratch_ability: PackedScene
 
+var damage = 5
+
 func _on_timer_timeout() -> void:
 	var player = get_tree().get_first_node_in_group("player")
 	if player == null:
@@ -24,6 +26,8 @@ func _on_timer_timeout() -> void:
 	)
 	
 
-	var scratch_instance = scratch_ability.instantiate() as Node2D
+	var scratch_instance = scratch_ability.instantiate() as ScratchAbility
 	player.get_parent().add_child(scratch_instance)
+	scratch_instance.hitbox_component.damage = damage
+	
 	scratch_instance.global_position = enemies[0].global_position

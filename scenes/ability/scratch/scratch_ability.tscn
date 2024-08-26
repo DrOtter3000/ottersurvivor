@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c33a3ojhnfw30"]
+[gd_scene load_steps=8 format=3 uid="uid://c33a3ojhnfw30"]
 
+[ext_resource type="Script" path="res://scenes/ability/scratch/scratch_ability.gd" id="1_epbu0"]
 [ext_resource type="Texture2D" uid="uid://bmsdion01nmad" path="res://scenes/ability/scratch/Scratch.png" id="1_gp4fg"]
+[ext_resource type="PackedScene" uid="uid://dgyqjloi7g3yd" path="res://scenes/component/hitbox_component.tscn" id="2_8eykl"]
 
 [sub_resource type="Animation" id="Animation_gsq42"]
 length = 0.001
@@ -53,10 +55,11 @@ _data = {
 "default": SubResource("Animation_8vc1e")
 }
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_auu7u"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_qu3eh"]
 radius = 10.0203
 
 [node name="ScratchAbility" type="Node2D"]
+script = ExtResource("1_epbu0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_gp4fg")
@@ -67,9 +70,7 @@ libraries = {
 }
 autoplay = "default"
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 4
-collision_mask = 0
+[node name="HitboxComponent" parent="." instance=ExtResource("2_8eykl")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_auu7u")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_qu3eh")

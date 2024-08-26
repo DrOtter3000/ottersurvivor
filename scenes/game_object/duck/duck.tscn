@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://bwu1fexk2f0bp"]
+[gd_scene load_steps=8 format=3 uid="uid://bwu1fexk2f0bp"]
 
 [ext_resource type="Script" path="res://scenes/game_object/duck/duck.gd" id="1_2muum"]
 [ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/game_object/duck/Duck.png" id="1_4getp"]
 [ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="2_msycr"]
 [ext_resource type="PackedScene" uid="uid://c7ynmg4eoar8m" path="res://scenes/component/clam_drop_component.tscn" id="3_4dc1p"]
+[ext_resource type="PackedScene" uid="uid://d22ub4kkd54od" path="res://scenes/component/hurt_box_component.tscn" id="4_520cp"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_k548t"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m4y3l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pruxb"]
 radius = 6.0
@@ -21,13 +22,12 @@ script = ExtResource("1_2muum")
 [node name="ClamDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_4dc1p")]
 health_component = NodePath("../HealthComponent")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_layer = 0
-collision_mask = 4
+[node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_520cp")]
+health_component = NodePath("../HealthComponent")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
 position = Vector2(0, -6)
-shape = SubResource("CircleShape2D_k548t")
+shape = SubResource("CircleShape2D_m4y3l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_4getp")
@@ -36,5 +36,3 @@ offset = Vector2(0, -6)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_pruxb")
-
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
