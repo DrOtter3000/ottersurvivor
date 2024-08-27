@@ -3,8 +3,15 @@ extends Node
 const MAX_RANGE = 150
 
 @export var scratch_ability: PackedScene
+@onready var timer: Timer = $Timer
 
 var damage = 5
+var base_wait_time
+
+
+func _ready() -> void:
+	base_wait_time = timer.wait_time
+	GameEvents.ability_upgrade_added.connect(on_ability_upgrade_added)
 
 func _on_timer_timeout() -> void:
 	var player = get_tree().get_first_node_in_group("player")
@@ -31,3 +38,14 @@ func _on_timer_timeout() -> void:
 	scratch_instance.hitbox_component.damage = damage
 	
 	scratch_instance.global_position = enemies[0].global_position
+
+
+func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
+	if upgrade.id != "scratch_rate":
+		return
+	
+	var percent_reduction = current_upgrades["scratch_rate"]["quantity"] * .5
+	timer.wait_time = base_wait_time * (1 - percent_reduction)
+	timer.start()
+	
+	print(timer.wait_time)
