@@ -1,11 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://dhboyxf4gdyp8"]
+[gd_scene load_steps=8 format=3 uid="uid://dhboyxf4gdyp8"]
 
 [ext_resource type="Texture2D" uid="uid://cxqr02vhderoi" path="res://scenes/game_object/player/Player.png" id="1_62rs6"]
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_s5kjg"]
 [ext_resource type="PackedScene" uid="uid://c42n8wyo8hgel" path="res://scenes/ability/scratch_ability_controller/scratch_ability_controller.tscn" id="2_f28a0"]
+[ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="2_syr0e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0k7g3"]
 radius = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k4blq"]
+radius = 6.36225
+height = 26.7794
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8ir84"]
 radius = 4.375
@@ -17,27 +22,47 @@ collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_s5kjg")
 
+[node name="HealthComponent" parent="." instance=ExtResource("2_syr0e")]
+
 [node name="AbilityManager" type="Node" parent="."]
 
 [node name="ScratchAbilityController" parent="AbilityManager" instance=ExtResource("2_f28a0")]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PickupArea2D" type="Area2D" parent="."]
 collision_layer = 16
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea2D"]
 position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_0k7g3")
+
+[node name="CollisionArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea2D"]
+position = Vector2(0, -6.5)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_k4blq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_62rs6")
 offset = Vector2(0, -7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.375, -6.625)
+position = Vector2(0, -6.5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_8ir84")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -6)
 position_smoothing_enabled = true
 position_smoothing_speed = 16.0
+
+[node name="DamageIntervalTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="body_entered" from="CollisionArea2D" to="." method="_on_collision_area_2d_body_entered"]
+[connection signal="body_exited" from="CollisionArea2D" to="." method="_on_collision_area_2d_body_exited"]
+[connection signal="timeout" from="DamageIntervalTimer" to="." method="_on_damage_interval_timer_timeout"]

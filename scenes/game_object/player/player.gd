@@ -3,12 +3,13 @@ extends CharacterBody2D
 const MAX_SPEED = 125	
 const ACCELERATION_SMOOTHING = 25
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+@onready var collision_area_2d: Area2D = $CollisionArea2D
+@onready var health_component: HealthComponent = $HealthComponent
+@onready var damage_interval_timer: Timer = $DamageIntervalTimer
+
+var number_colliding_bodies = 0
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var movement_vector = get_movement_vector()
 	var direction = movement_vector.normalized()
@@ -24,3 +25,24 @@ func get_movement_vector():
 	var y_movement = Input.get_action_strength("down") - Input.get_action_strength("up")
 
 	return Vector2(x_movement, y_movement)
+
+
+func check_deal_damage():
+	if number_colliding_bodies == 0 || !damage_interval_timer.is_stopped():
+		return
+	health_component.damage(1)
+	damage_interval_timer.start()
+	print(health_component.current_health)
+
+
+func _on_collision_area_2d_body_entered(body: Node2D) -> void:
+	number_colliding_bodies += 1
+	check_deal_damage()
+
+
+func _on_collision_area_2d_body_exited(body: Node2D) -> void:
+	number_colliding_bodies -= 1
+
+
+func _on_damage_interval_timer_timeout() -> void:
+	check_deal_damage()
