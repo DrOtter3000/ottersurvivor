@@ -22,6 +22,29 @@ collision_mask = 2
 motion_mode = 1
 script = ExtResource("1_s5kjg")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HealthBar" type="ProgressBar" parent="CanvasLayer/MarginContainer"]
+custom_minimum_size = Vector2(300, 12)
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
 [node name="HealthComponent" parent="." instance=ExtResource("2_syr0e")]
 
 [node name="AbilityManager" type="Node" parent="."]
