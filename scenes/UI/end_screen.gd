@@ -1,9 +1,17 @@
 extends CanvasLayer
 
+@onready var title_label: Label = $MarginContainer/PanelContainer/MarginContainer/VBoxContainer/TitleLabel
+@onready var description_label: Label = $MarginContainer/PanelContainer/MarginContainer/VBoxContainer/DescriptionLabel
+
 
 func _ready() -> void:
 	get_tree().paused = true
-	
+
+
+func set_defeat():
+	title_label.text = "Defeat"
+	description_label.text = "The feesh is lost"
+
 
 func _on_restart_button_pressed() -> void:
 	get_tree().paused = false
