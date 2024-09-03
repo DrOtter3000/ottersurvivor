@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ipbh4glt34uf"]
+
+[ext_resource type="Script" path="res://scenes/ability/tail_ability_controller/tail_ability_controller.gd" id="1_mqdls"]
+[ext_resource type="PackedScene" uid="uid://sq4hap0vgvwb" path="res://scenes/ability/tail_ability/tail_ability.tscn" id="2_wgu38"]
+
+[node name="TailAbilityController" type="Node"]
+script = ExtResource("1_mqdls")
+tail_ability_scene = ExtResource("2_wgu38")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

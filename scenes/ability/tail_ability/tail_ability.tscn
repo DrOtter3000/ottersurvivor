@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://sq4hap0vgvwb"]
+
+[ext_resource type="Texture2D" uid="uid://lhinmwag46nb" path="res://scenes/ability/tail_ability/Tail.png" id="1_1pfnd"]
+[ext_resource type="Script" path="res://scenes/ability/tail_ability/tail_ability.gd" id="1_qbr75"]
+[ext_resource type="PackedScene" uid="uid://dgyqjloi7g3yd" path="res://scenes/component/hitbox_component.tscn" id="3_bsw8o"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_av41g"]
+radius = 5.08785
+height = 20.009
+
+[node name="TailAbility" type="Node2D"]
+script = ExtResource("1_qbr75")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1pfnd")
+
+[node name="HitboxComponent" parent="." instance=ExtResource("3_bsw8o")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_av41g")
