@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhboyxf4gdyp8"]
+[gd_scene load_steps=10 format=3 uid="uid://dhboyxf4gdyp8"]
 
 [ext_resource type="Texture2D" uid="uid://cxqr02vhderoi" path="res://scenes/game_object/player/Player.png" id="1_62rs6"]
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_s5kjg"]
 [ext_resource type="PackedScene" uid="uid://c42n8wyo8hgel" path="res://scenes/ability/scratch_ability_controller/scratch_ability_controller.tscn" id="2_f28a0"]
 [ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="2_syr0e"]
-[ext_resource type="PackedScene" uid="uid://ipbh4glt34uf" path="res://scenes/ability/tail_ability_controller/tail_ability_controller.tscn" id="4_26m0n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6jpnl"]
 bg_color = Color(0, 0, 0, 1)
@@ -61,11 +60,9 @@ show_percentage = false
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_syr0e")]
 
-[node name="AbilityManager" type="Node" parent="."]
+[node name="Abilities" type="Node" parent="."]
 
-[node name="ScratchAbilityController" parent="AbilityManager" instance=ExtResource("2_f28a0")]
-
-[node name="TailAbilityController" parent="AbilityManager" instance=ExtResource("4_26m0n")]
+[node name="ScratchAbilityController" parent="Abilities" instance=ExtResource("2_f28a0")]
 
 [node name="PickupArea2D" type="Area2D" parent="."]
 collision_layer = 16

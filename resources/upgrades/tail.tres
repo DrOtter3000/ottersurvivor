@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=3 format=3 uid="uid://dycpglahlt6hs"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability.gd" id="1_5sgw0"]
+[ext_resource type="PackedScene" uid="uid://ipbh4glt34uf" path="res://scenes/ability/tail_ability_controller/tail_ability_controller.tscn" id="1_dp5wg"]
+
+[resource]
+script = ExtResource("1_5sgw0")
+ability_controller_scene = ExtResource("1_dp5wg")
+id = "tail"
+name = "Tail Punch"
+description = "Omter strikes his enemies down, with a single strike of its mighty tail!"
