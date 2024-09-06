@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwu1fexk2f0bp"]
+[gd_scene load_steps=12 format=3 uid="uid://bwu1fexk2f0bp"]
 
 [ext_resource type="Script" path="res://scenes/game_object/duck/duck.gd" id="1_2muum"]
 [ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/game_object/duck/Duck.png" id="1_4getp"]
 [ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="2_msycr"]
 [ext_resource type="PackedScene" uid="uid://c7ynmg4eoar8m" path="res://scenes/component/clam_drop_component.tscn" id="3_4dc1p"]
 [ext_resource type="PackedScene" uid="uid://d22ub4kkd54od" path="res://scenes/component/hurt_box_component.tscn" id="4_520cp"]
+[ext_resource type="PackedScene" uid="uid://orptliton0cr" path="res://scenes/component/death_component.tscn" id="4_yn8fi"]
 
 [sub_resource type="Animation" id="Animation_gluhk"]
 resource_name = "walk"
@@ -90,6 +91,10 @@ autoplay = "walk"
 
 [node name="ClamDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_4dc1p")]
 health_component = NodePath("../HealthComponent")
+
+[node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_yn8fi")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
 
 [node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_520cp")]
 health_component = NodePath("../HealthComponent")
