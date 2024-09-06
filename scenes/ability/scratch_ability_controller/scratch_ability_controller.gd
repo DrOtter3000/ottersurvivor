@@ -48,5 +48,3 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 	var percent_reduction = current_upgrades["scratch_rate"]["quantity"] * .1
 	timer.wait_time = base_wait_time * (1 - percent_reduction)
 	timer.start()
-	
-	print(timer.wait_time)
