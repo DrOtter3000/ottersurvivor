@@ -1,0 +1,47 @@
+[gd_scene load_steps=9 format=3 uid="uid://chbfdiiieq2xj"]
+
+[ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="1_j5wua"]
+[ext_resource type="Script" path="res://scenes/game_object/crab/crab.gd" id="1_v21yi"]
+[ext_resource type="PackedScene" uid="uid://bmnsoiud58ts0" path="res://scenes/component/velocity_component.tscn" id="2_4o0ay"]
+[ext_resource type="PackedScene" uid="uid://orptliton0cr" path="res://scenes/component/death_component.tscn" id="2_7vfwu"]
+[ext_resource type="Texture2D" uid="uid://bynl24ettb0x3" path="res://scenes/game_object/crab/Crab.png" id="3_7reje"]
+[ext_resource type="PackedScene" uid="uid://d22ub4kkd54od" path="res://scenes/component/hurt_box_component.tscn" id="4_2bgoc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ior5x"]
+radius = 6.51278
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hxe3i"]
+radius = 3.24974
+
+[node name="Crab" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("1_v21yi")
+
+[node name="HealthComponent" parent="." instance=ExtResource("1_j5wua")]
+max_health = 30.0
+
+[node name="VelocityComponent" parent="." instance=ExtResource("2_4o0ay")]
+max_speed = 60
+acceleration = 2.0
+
+[node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("2_7vfwu")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+texture = ExtResource("3_7reje")
+offset = Vector2(0, -6)
+
+[node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_2bgoc")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
+position = Vector2(0, -5.78123)
+shape = SubResource("CircleShape2D_ior5x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -4.42)
+shape = SubResource("CircleShape2D_hxe3i")

@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-@onready var visuals: Node2D = $Visuals
 @onready var velocity_component: Node = $VelocityComponent
+@onready var visuals: Node2D = $Visuals
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	velocity_component.accelerate_to_player()
 	velocity_component.move(self)
