@@ -3,13 +3,16 @@ extends Node
 const SPAWN_RADIUS = 400
 
 @export var duck_scene: PackedScene
+@export var crab_scene: PackedScene
 @export var arena_time_manager: Node
 @onready var timer: Timer = $Timer
 
 var base_spawn_time = 0
+var enemy_table = WeightedTable.new()
 
 
 func _ready() -> void:
+	enemy_table.add_item(duck_scene, 10)
 	base_spawn_time = timer.wait_time
 	arena_time_manager.arena_difficulty_increased.connect(on_arena_difficulty_increased)
 
@@ -38,7 +41,13 @@ func get_spawn_position():
 func _on_timer_timeout() -> void:
 	timer.start()
 	
-	var enemy = duck_scene.instantiate() as Node2D
+	var player = get_tree().get_first_node_in_group("player")
+	if player == null:
+		return
+	
+	
+	var enemy_scene = enemy_table.pick_item()
+	var enemy = enemy_scene.instantiate() as Node2D
 	
 	var entities_layer = get_tree().get_first_node_in_group("entities_layer")
 	entities_layer.add_child(enemy)
@@ -49,3 +58,6 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	var time_off = (.1 / 12) * arena_difficulty
 	time_off = min(time_off, .7)
 	timer.wait_time = base_spawn_time - time_off
+	
+	if arena_difficulty == 6:
+		enemy_table.add_item(crab_scene, 20)
