@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwu1fexk2f0bp"]
+[gd_scene load_steps=16 format=3 uid="uid://bwu1fexk2f0bp"]
 
 [ext_resource type="Script" path="res://scenes/game_object/duck/duck.gd" id="1_2muum"]
 [ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/game_object/duck/Duck.png" id="1_4getp"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://d22ub4kkd54od" path="res://scenes/component/hurt_box_component.tscn" id="4_520cp"]
 [ext_resource type="PackedScene" uid="uid://bmnsoiud58ts0" path="res://scenes/component/velocity_component.tscn" id="4_q7lvu"]
 [ext_resource type="PackedScene" uid="uid://orptliton0cr" path="res://scenes/component/death_component.tscn" id="4_yn8fi"]
+[ext_resource type="PackedScene" uid="uid://b5uo3k3o6t67m" path="res://scenes/component/hit_flash_component.tscn" id="5_eonnf"]
+[ext_resource type="Shader" path="res://scenes/component/hit_flash_component.gdshader" id="6_27nhi"]
 
 [sub_resource type="Animation" id="Animation_pv34k"]
 length = 0.001
@@ -71,6 +73,11 @@ _data = {
 "walk": SubResource("Animation_gluhk")
 }
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cfnlr"]
+resource_local_to_scene = true
+shader = ExtResource("6_27nhi")
+shader_parameter/lerp_percent = 0.0
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_m4y3l"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pruxb"]
@@ -94,6 +101,11 @@ autoplay = "walk"
 health_component = NodePath("../HealthComponent")
 
 [node name="VelocityComponent" parent="." instance=ExtResource("4_q7lvu")]
+
+[node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_eonnf")]
+health_component = NodePath("../HealthComponent")
+sprite = NodePath("../Visuals/Sprite2D")
+hit_flash_material = SubResource("ShaderMaterial_cfnlr")
 
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("4_yn8fi")]
 health_component = NodePath("../HealthComponent")
