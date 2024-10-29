@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://p7buiqnu2xyv"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_0sgww"]
+
+[resource]
+script = ExtResource("1_0sgww")
+id = "scratch_damage"
+max_quantity = 0
+name = "Sharper Scratchies"
+description = "Make Otter sharpen its claws. Now more deadly."

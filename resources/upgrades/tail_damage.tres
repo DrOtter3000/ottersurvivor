@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://cis736vwma12d"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_gp22m"]
+
+[resource]
+script = ExtResource("1_gp22m")
+id = "tail_damage"
+max_quantity = 0
+name = "Stronger Tail"
+description = "Otter trained a lot. Now tail beats much harder. *squeek*"

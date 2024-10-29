@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cmnaykuitttlx"]
+[gd_scene load_steps=13 format=3 uid="uid://cmnaykuitttlx"]
 
 [ext_resource type="PackedScene" uid="uid://d0hriw6h40ceu" path="res://scenes/UI/arena_time_ui.tscn" id="1_l4n3o"]
 [ext_resource type="PackedScene" uid="uid://dhboyxf4gdyp8" path="res://scenes/game_object/player/player.tscn" id="1_ngtwe"]
@@ -12,9 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://b3r6rf0q7wokx" path="res://scenes/manager/upgrade_manager.tscn" id="6_y5jc3"]
 [ext_resource type="PackedScene" uid="uid://cdn08yb42otpy" path="res://scenes/UI/upgrade_screen.tscn" id="7_qsqf6"]
 [ext_resource type="PackedScene" uid="uid://chbfdiiieq2xj" path="res://scenes/game_object/crab/crab.tscn" id="8_3bdj3"]
-[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="9_rhf3k"]
-[ext_resource type="Resource" uid="uid://drmvg6umju3kx" path="res://resources/upgrades/scratch_rate.tres" id="10_cubuv"]
-[ext_resource type="Resource" uid="uid://dycpglahlt6hs" path="res://resources/upgrades/tail.tres" id="11_i8yk0"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_xugfj")
@@ -36,7 +33,6 @@ crab_scene = ExtResource("8_3bdj3")
 arena_time_manager = NodePath("../ArenaTimeManager")
 
 [node name="UpgradeManager" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("6_y5jc3")]
-upgrade_pool = Array[ExtResource("9_rhf3k")]([ExtResource("10_cubuv"), ExtResource("11_i8yk0")])
 experience_manager = NodePath("../ExperienceManager")
 upgrade_screen_scene = ExtResource("7_qsqf6")
 
