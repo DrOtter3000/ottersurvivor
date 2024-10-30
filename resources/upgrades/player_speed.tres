@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://bfghfwdu58djt"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_rxfob"]
+
+[resource]
+script = ExtResource("1_rxfob")
+id = "player_speed"
+max_quantity = 0
+name = "Faster Leggies"
+description = "Otter runnin faster! No enemy can get him! Zip... I here! ... Zap... Now I here!"

@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://dhboyxf4gdyp8"]
+[gd_scene load_steps=12 format=3 uid="uid://dhboyxf4gdyp8"]
 
 [ext_resource type="Texture2D" uid="uid://cxqr02vhderoi" path="res://scenes/game_object/player/Player.png" id="1_62rs6"]
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_s5kjg"]
 [ext_resource type="PackedScene" uid="uid://c42n8wyo8hgel" path="res://scenes/ability/scratch_ability_controller/scratch_ability_controller.tscn" id="2_f28a0"]
+[ext_resource type="PackedScene" uid="uid://bmnsoiud58ts0" path="res://scenes/component/velocity_component.tscn" id="2_nkhdg"]
 [ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="2_syr0e"]
 
 [sub_resource type="Animation" id="Animation_5rgny"]
@@ -112,6 +113,10 @@ mouse_filter = 2
 max_value = 1.0
 value = 0.5
 show_percentage = false
+
+[node name="VelocityComponent" parent="." instance=ExtResource("2_nkhdg")]
+max_speed = 90
+acceleration = 25.0
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_syr0e")]
 
