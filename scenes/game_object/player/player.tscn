@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhboyxf4gdyp8"]
+[gd_scene load_steps=14 format=3 uid="uid://dhboyxf4gdyp8"]
 
 [ext_resource type="Texture2D" uid="uid://cxqr02vhderoi" path="res://scenes/game_object/player/Player.png" id="1_62rs6"]
 [ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_s5kjg"]
 [ext_resource type="PackedScene" uid="uid://c42n8wyo8hgel" path="res://scenes/ability/scratch_ability_controller/scratch_ability_controller.tscn" id="2_f28a0"]
 [ext_resource type="PackedScene" uid="uid://bmnsoiud58ts0" path="res://scenes/component/velocity_component.tscn" id="2_nkhdg"]
 [ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="2_syr0e"]
+[ext_resource type="Script" path="res://scenes/component/random_stream_player_2d_component.gd" id="5_4dcm8"]
+[ext_resource type="AudioStream" uid="uid://brtu4u0ovgd0j" path="res://assets/audio/OtterHurt.wav" id="6_iw0yl"]
 
 [sub_resource type="Animation" id="Animation_5rgny"]
 length = 0.001
@@ -123,6 +125,11 @@ acceleration = 25.0
 [node name="Abilities" type="Node" parent="."]
 
 [node name="ScratchAbilityController" parent="Abilities" instance=ExtResource("2_f28a0")]
+
+[node name="RandomStreamPlayer2DComponent" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+script = ExtResource("5_4dcm8")
+streams = Array[AudioStream]([ExtResource("6_iw0yl")])
 
 [node name="PickupArea2D" type="Area2D" parent="."]
 visible = false
