@@ -5,6 +5,6 @@
 [resource]
 script = ExtResource("1_rxfob")
 id = "player_speed"
-max_quantity = 0
+max_quantity = 2
 name = "Faster Leggies"
 description = "Otter runnin faster! No enemy can get him! Zip... I here! ... Zap... Now I here!"
