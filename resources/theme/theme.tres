@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ciuisw8ssgr51"]
+[gd_resource type="Theme" load_steps=11 format=3 uid="uid://ciuisw8ssgr51"]
 
 [ext_resource type="FontFile" uid="uid://cet330e81cb8x" path="res://resources/theme/joystix/joystix monospace.otf" id="1_avxmi"]
 [ext_resource type="Texture2D" uid="uid://d0h1s0ufi7awc" path="res://assets/ui/ui.png" id="1_nhvly"]
@@ -14,6 +14,32 @@ texture_margin_top = 1.0
 texture_margin_right = 1.0
 texture_margin_bottom = 1.0
 region_rect = Rect2(18, 2, 12, 12)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_83cyo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iie1k"]
+texture = ExtResource("1_nhvly")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(20, 20, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o6i5c"]
+texture = ExtResource("1_nhvly")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(4, 20, 8, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cmnx"]
+texture = ExtResource("1_nhvly")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(4, 20, 8, 8)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_leep2"]
 texture = ExtResource("1_nhvly")
@@ -39,6 +65,13 @@ default_font = ExtResource("1_avxmi")
 default_font_size = 12
 AlternatePanelContainer/base_type = &"PanelContainer"
 AlternatePanelContainer/styles/panel = SubResource("StyleBoxTexture_5wfni")
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_hover_color = Color(0, 0, 0, 1)
+Button/colors/font_outline_color = Color(1, 1, 1, 1)
+Button/styles/focus = SubResource("StyleBoxEmpty_83cyo")
+Button/styles/hover = SubResource("StyleBoxTexture_iie1k")
+Button/styles/normal = SubResource("StyleBoxTexture_o6i5c")
+Button/styles/pressed = SubResource("StyleBoxTexture_0cmnx")
 Label/constants/line_spacing = 0
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_leep2")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_5al3f")
