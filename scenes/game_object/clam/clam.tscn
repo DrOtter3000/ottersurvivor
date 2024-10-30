@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://mdfot0xp45w0"]
+[gd_scene load_steps=6 format=3 uid="uid://mdfot0xp45w0"]
 
 [ext_resource type="Script" path="res://scenes/game_object/clam/clam.gd" id="1_ulwjj"]
 [ext_resource type="Texture2D" uid="uid://267lnhy4fiuk" path="res://scenes/game_object/clam/Clam.png" id="2_8en8r"]
+[ext_resource type="Script" path="res://scenes/component/random_stream_player_2d_component.gd" id="3_f1n46"]
+[ext_resource type="AudioStream" uid="uid://cte1xd3w88exu" path="res://assets/audio/PickupClam.wav" id="4_7j6k0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wsksp"]
 radius = 7.70429
@@ -18,5 +20,11 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_wsksp")
+
+[node name="RandomStreamPlayer2DComponent" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 300.0
+script = ExtResource("3_f1n46")
+streams = Array[AudioStream]([ExtResource("4_7j6k0")])
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
