@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ciuisw8ssgr51"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://ciuisw8ssgr51"]
 
 [ext_resource type="FontFile" uid="uid://cet330e81cb8x" path="res://resources/theme/joystix/joystix monospace.otf" id="1_avxmi"]
 [ext_resource type="Texture2D" uid="uid://d0h1s0ufi7awc" path="res://assets/ui/ui.png" id="1_nhvly"]
@@ -23,6 +23,17 @@ texture_margin_right = 4.0
 texture_margin_bottom = 3.0
 region_rect = Rect2(0, 0, 16, 16)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5al3f"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o5e10"]
+bg_color = Color(0.698039, 0.0627451, 0.188235, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.8, 0.8, 0.8, 0)
+
 [resource]
 default_font = ExtResource("1_avxmi")
 default_font_size = 12
@@ -30,3 +41,5 @@ AlternatePanelContainer/base_type = &"PanelContainer"
 AlternatePanelContainer/styles/panel = SubResource("StyleBoxTexture_5wfni")
 Label/constants/line_spacing = 0
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_leep2")
+ProgressBar/styles/background = SubResource("StyleBoxFlat_5al3f")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_o5e10")
