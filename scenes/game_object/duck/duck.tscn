@@ -112,6 +112,8 @@ hit_flash_material = SubResource("ShaderMaterial_cfnlr")
 health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
 
+[node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("10_pkpa8")]
+
 [node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_520cp")]
 health_component = NodePath("../HealthComponent")
 
@@ -130,5 +132,3 @@ shape = SubResource("CircleShape2D_pruxb")
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
 texture = ExtResource("1_4getp")
 offset = Vector2(0, -6)
-
-[node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("10_pkpa8")]

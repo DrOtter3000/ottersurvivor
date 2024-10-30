@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://chbfdiiieq2xj"]
+[gd_scene load_steps=17 format=3 uid="uid://chbfdiiieq2xj"]
 
 [ext_resource type="PackedScene" uid="uid://dqij60m8clcoy" path="res://scenes/component/health_component.tscn" id="1_j5wua"]
 [ext_resource type="Script" path="res://scenes/game_object/crab/crab.gd" id="1_v21yi"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c7ynmg4eoar8m" path="res://scenes/component/clam_drop_component.tscn" id="4_i4xbr"]
 [ext_resource type="PackedScene" uid="uid://b5uo3k3o6t67m" path="res://scenes/component/hit_flash_component.tscn" id="5_f21vx"]
 [ext_resource type="Shader" path="res://scenes/component/hit_flash_component.gdshader" id="6_3b7l3"]
+[ext_resource type="PackedScene" uid="uid://d22vxyr1gywry" path="res://scenes/component/random_stream_player_2d_component.tscn" id="8_dc1ni"]
 
 [sub_resource type="Animation" id="Animation_8mto2"]
 length = 0.001
@@ -90,6 +91,8 @@ hit_flash_material = SubResource("ShaderMaterial_qydr5")
 [node name="DeathComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("2_7vfwu")]
 health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
+
+[node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("8_dc1ni")]
 
 [node name="Visuals" type="Node2D" parent="."]
 

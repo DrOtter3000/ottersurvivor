@@ -1,7 +1,23 @@
-[gd_scene load_steps=9 format=3 uid="uid://orptliton0cr"]
+[gd_scene load_steps=10 format=3 uid="uid://orptliton0cr"]
 
 [ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/game_object/duck/Duck.png" id="1_5sxhb"]
 [ext_resource type="Script" path="res://scenes/component/death_component.gd" id="1_asv5m"]
+[ext_resource type="PackedScene" uid="uid://d22vxyr1gywry" path="res://scenes/component/random_stream_player_2d_component.tscn" id="3_2h1ng"]
+
+[sub_resource type="Animation" id="Animation_syawm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("GPUParticles2D:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_752ng"]
 resource_name = "default"
@@ -30,21 +46,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"queue_free"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_syawm"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("GPUParticles2D:emitting")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_rp2yt"]
@@ -87,3 +88,5 @@ texture = ExtResource("1_5sxhb")
 lifetime = 0.5
 one_shot = true
 interpolate = false
+
+[node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("3_2h1ng")]

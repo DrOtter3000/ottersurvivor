@@ -6,7 +6,6 @@ extends AudioStreamPlayer2D
 
 func play_random():
 	if streams == null || streams.size() == 0:
-		print(streams)
 		return
 	
 	stream = streams.pick_random()
