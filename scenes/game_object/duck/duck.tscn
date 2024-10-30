@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bwu1fexk2f0bp"]
+[gd_scene load_steps=17 format=3 uid="uid://bwu1fexk2f0bp"]
 
 [ext_resource type="Script" path="res://scenes/game_object/duck/duck.gd" id="1_2muum"]
 [ext_resource type="Texture2D" uid="uid://0v5virrbcxcq" path="res://scenes/game_object/duck/Duck.png" id="1_4getp"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://orptliton0cr" path="res://scenes/component/death_component.tscn" id="4_yn8fi"]
 [ext_resource type="PackedScene" uid="uid://b5uo3k3o6t67m" path="res://scenes/component/hit_flash_component.tscn" id="5_eonnf"]
 [ext_resource type="Shader" path="res://scenes/component/hit_flash_component.gdshader" id="6_27nhi"]
+[ext_resource type="PackedScene" uid="uid://d22vxyr1gywry" path="res://scenes/component/random_stream_player_2d_component.tscn" id="10_pkpa8"]
 
 [sub_resource type="Animation" id="Animation_pv34k"]
 length = 0.001
@@ -129,3 +130,5 @@ shape = SubResource("CircleShape2D_pruxb")
 [node name="Sprite2D" type="Sprite2D" parent="Visuals"]
 texture = ExtResource("1_4getp")
 offset = Vector2(0, -6)
+
+[node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("10_pkpa8")]

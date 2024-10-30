@@ -1,0 +1,15 @@
+[gd_scene load_steps=9 format=3 uid="uid://d22vxyr1gywry"]
+
+[ext_resource type="Script" path="res://scenes/component/random_stream_player_2d_component.gd" id="1_aq100"]
+[ext_resource type="AudioStream" uid="uid://dtijve6mpp7ky" path="res://assets/audio/hitHurt.wav" id="2_ge7uh"]
+[ext_resource type="AudioStream" uid="uid://bh4ebff45frcq" path="res://assets/audio/hitHurt(1).wav" id="3_o7s7g"]
+[ext_resource type="AudioStream" uid="uid://3qaidmk2ycb8" path="res://assets/audio/hitHurt(2).wav" id="4_kdet4"]
+[ext_resource type="AudioStream" uid="uid://2qfqy6l144or" path="res://assets/audio/hitHurt(3).wav" id="5_nh6m6"]
+[ext_resource type="AudioStream" uid="uid://c5001hmp4tq84" path="res://assets/audio/hitHurt(4).wav" id="6_tmu6t"]
+[ext_resource type="AudioStream" uid="uid://sir7vvcu4x4n" path="res://assets/audio/hitHurt(5).wav" id="7_c7wmy"]
+[ext_resource type="AudioStream" uid="uid://s4qvfcm5ohrp" path="res://assets/audio/hitHurt(6).wav" id="8_6u5yr"]
+
+[node name="RandomStreamPlayer2DComponent" type="AudioStreamPlayer2D"]
+volume_db = -8.0
+script = ExtResource("1_aq100")
+streams = Array[AudioStream]([ExtResource("2_ge7uh"), ExtResource("3_o7s7g"), ExtResource("4_kdet4"), ExtResource("5_nh6m6"), ExtResource("6_tmu6t"), ExtResource("7_c7wmy"), ExtResource("8_6u5yr")])
