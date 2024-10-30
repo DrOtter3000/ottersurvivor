@@ -1,6 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://cdx56myuv2y05"]
+[gd_scene load_steps=6 format=3 uid="uid://cdx56myuv2y05"]
 
+[ext_resource type="Script" path="res://scenes/UI/crt_effect.gd" id="1_b0p41"]
 [ext_resource type="Shader" path="res://scenes/UI/crt.gdshader" id="1_qmn6p"]
+
+[sub_resource type="Animation" id="Animation_l3dn6"]
+resource_name = "hit"
+length = 0.4
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6uopt"]
+_data = {
+"hit": SubResource("Animation_l3dn6")
+}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nacvw"]
 shader = ExtResource("1_qmn6p")
@@ -11,16 +21,23 @@ shader_parameter/noise_amount = 0.0
 shader_parameter/interference_amount = 0.0
 shader_parameter/grille_amount = 0.0
 shader_parameter/grille_size = 1.0
-shader_parameter/vignette_amount = 0.3
+shader_parameter/vignette_amount = 0.6
 shader_parameter/vignette_intensity = 0.4
-shader_parameter/aberation_amount = 0.0
-shader_parameter/roll_line_amount = 0.0
-shader_parameter/roll_speed = 3.8e-07
+shader_parameter/aberation_amount = 0.5
+shader_parameter/roll_line_amount = 0.01
+shader_parameter/roll_speed = 1.0
 shader_parameter/scan_line_strength = -1.0
 shader_parameter/pixel_strength = 0.0
 
 [node name="CRT-Effect" type="CanvasLayer"]
 process_mode = 3
+layer = 2
+script = ExtResource("1_b0p41")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6uopt")
+}
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_nacvw")
@@ -29,3 +46,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
