@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cmnaykuitttlx"]
+[gd_scene load_steps=15 format=3 uid="uid://cmnaykuitttlx"]
 
 [ext_resource type="PackedScene" uid="uid://d0hriw6h40ceu" path="res://scenes/UI/arena_time_ui.tscn" id="1_l4n3o"]
 [ext_resource type="PackedScene" uid="uid://dhboyxf4gdyp8" path="res://scenes/game_object/player/player.tscn" id="1_ngtwe"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c1xa57vsm6g11" path="res://scenes/manager/arena_time_manager.tscn" id="2_14150"]
 [ext_resource type="PackedScene" uid="uid://dpp4215egku06" path="res://scenes/manager/experience_manager.tscn" id="3_3n0or"]
 [ext_resource type="PackedScene" uid="uid://cdx56myuv2y05" path="res://scenes/UI/crt_effect.tscn" id="3_wwwpa"]
+[ext_resource type="PackedScene" uid="uid://bufyusvcimynr" path="res://scenes/UI/hurt_effect.tscn" id="4_iramu"]
 [ext_resource type="PackedScene" uid="uid://b3r6rf0q7wokx" path="res://scenes/manager/upgrade_manager.tscn" id="6_y5jc3"]
 [ext_resource type="PackedScene" uid="uid://cdn08yb42otpy" path="res://scenes/UI/upgrade_screen.tscn" id="7_qsqf6"]
 [ext_resource type="PackedScene" uid="uid://chbfdiiieq2xj" path="res://scenes/game_object/crab/crab.tscn" id="8_3bdj3"]
@@ -19,6 +20,8 @@ script = ExtResource("1_xugfj")
 end_screen_scene = ExtResource("2_8dy58")
 
 [node name="CRT-Effect" parent="." instance=ExtResource("3_wwwpa")]
+
+[node name="HurtEffect" parent="." instance=ExtResource("4_iramu")]
 
 [node name="ArenaTimeUI" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_l4n3o")]
 arena_time_manager = NodePath("../ArenaTimeManager")
