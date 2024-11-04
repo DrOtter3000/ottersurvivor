@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxsv4q45x1dqo"]
+
+[ext_resource type="AudioStream" uid="uid://dbufipovhbm8k" path="res://assets/audio/Zero Respect.mp3" id="1_vf0xo"]
+[ext_resource type="Script" path="res://scenes/autoload/music_player.gd" id="2_ldriv"]
+
+[node name="MusicPlayer" type="AudioStreamPlayer"]
+process_mode = 3
+stream = ExtResource("1_vf0xo")
+volume_db = -10.0
+bus = &"Music"
+script = ExtResource("2_ldriv")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="finished" from="." to="." method="_on_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
