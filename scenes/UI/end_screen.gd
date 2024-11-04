@@ -11,6 +11,14 @@ func _ready() -> void:
 func set_defeat():
 	title_label.text = "Defeat"
 	description_label.text = "The feesh is lost"
+	play_jingle(true)
+
+
+func play_jingle(defeat: bool = false) -> void:
+	if defeat:
+		$DefeatScreenPlayer.play()
+	else:
+		$VictoryScreenPlayer.play()
 
 
 func _on_restart_button_pressed() -> void:

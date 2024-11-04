@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c510xy6uolr5b"]
+[gd_scene load_steps=9 format=3 uid="uid://c510xy6uolr5b"]
 
 [ext_resource type="Script" path="res://scenes/UI/end_screen.gd" id="1_8w21k"]
+[ext_resource type="AudioStream" uid="uid://cu3oelu3h6p3x" path="res://assets/audio/victory.wav" id="2_t3l70"]
 [ext_resource type="PackedScene" uid="uid://dqih6ahlrqv4t" path="res://scenes/UI/sound_button.tscn" id="2_y0e7g"]
+[ext_resource type="AudioStream" uid="uid://chgdmbf05625i" path="res://assets/audio/gameover.wav" id="3_gspr7"]
 
 [sub_resource type="Animation" id="Animation_x3oqt"]
 length = 0.001
@@ -86,6 +88,14 @@ _data = {
 [node name="EndScreen" type="CanvasLayer"]
 process_mode = 3
 script = ExtResource("1_8w21k")
+
+[node name="VictoryScreenPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_t3l70")
+volume_db = -5.0
+
+[node name="DefeatScreenPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gspr7")
+volume_db = -5.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
