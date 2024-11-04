@@ -1,5 +1,16 @@
-[gd_scene format=3 uid="uid://dqih6ahlrqv4t"]
+[gd_scene load_steps=4 format=3 uid="uid://dqih6ahlrqv4t"]
+
+[ext_resource type="Script" path="res://scenes/UI/sound_button.gd" id="1_73xh0"]
+[ext_resource type="PackedScene" uid="uid://bbjwo7u0yr2by" path="res://scenes/component/random_stream_player_component.tscn" id="2_v1bqp"]
+[ext_resource type="AudioStream" uid="uid://cdydas3lmrc17" path="res://assets/audio/click.wav" id="3_cjwgk"]
 
 [node name="SoundButton" type="Button"]
 offset_right = 6.0
 offset_bottom = 6.0
+text = "Text"
+script = ExtResource("1_73xh0")
+
+[node name="RandomStreamPlayerComponent" parent="." instance=ExtResource("2_v1bqp")]
+streams = Array[AudioStream]([ExtResource("3_cjwgk")])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
