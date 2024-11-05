@@ -5,6 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://dqih6ahlrqv4t" path="res://scenes/UI/sound_button.tscn" id="3_1wk5w"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
+process_mode = 3
+layer = 2
 script = ExtResource("1_kc3ih")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -38,6 +40,8 @@ theme_override_constants/separation = 16
 
 [node name="Title" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
 theme_override_font_sizes/font_size = 32
 text = "Options"
 

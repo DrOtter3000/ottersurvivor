@@ -22,7 +22,7 @@ shader_parameter/pixel_strength = 0.0
 
 [node name="CRT-Effect" type="CanvasLayer"]
 process_mode = 3
-layer = 2
+layer = 5
 script = ExtResource("1_b0p41")
 
 [node name="ColorRect" type="ColorRect" parent="."]

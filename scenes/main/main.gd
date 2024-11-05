@@ -3,9 +3,17 @@ extends Node
 @export var end_screen_scene: PackedScene
 @onready var player: CharacterBody2D = $Entities/Player
 
+var pause_menu_scene = preload("res://scenes/UI/pause_menu.tscn")
+
 
 func _ready() -> void:
 	player.health_component.died.connect(on_player_died)
+
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Pause"):
+		add_child(pause_menu_scene.instantiate())
+		get_tree().root.set_input_as_handled()
 
 
 func on_player_died():
