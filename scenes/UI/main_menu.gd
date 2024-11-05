@@ -4,8 +4,9 @@ var options_scene = preload("res://scenes/UI/options_menu.tscn")
 @onready var quit_button: Button = $MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/QuitButton
 
 
-
 func _on_play_button_pressed() -> void:
+	ScreenTransition.transition()
+	await ScreenTransition.transitioned_halfway
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
 
 
