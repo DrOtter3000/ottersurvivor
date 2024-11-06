@@ -22,3 +22,9 @@ func on_options_closed(options_instance: Node):
 
 func _on_quit_button_pressed() -> void:
 	get_tree().quit()
+
+
+func _on_meta_button_pressed() -> void:
+	ScreenTransition.transition()
+	await ScreenTransition.transitioned_halfway
+	get_tree().change_scene_to_file("res://scenes/UI/meta_menu.tscn")

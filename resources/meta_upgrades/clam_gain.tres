@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://bq4r0osrbr76b"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_2cxv7"]
+
+[resource]
+script = ExtResource("1_2cxv7")
+id = "clam_gain"
+max_quantity = 1
+clam_cost = 500
+title = "Greedy Otter"
+description = "Otter wewwy gweedy. Now moar clams in his paws"
