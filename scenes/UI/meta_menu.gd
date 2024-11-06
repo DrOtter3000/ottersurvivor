@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var grid_container: GridContainer = $MarginContainer/GridContainer
+@onready var grid_container: GridContainer = $ScrollContainer/MarginContainer/GridContainer
 
 @export var upgrades: Array[MetaUpgrade] = []
 
