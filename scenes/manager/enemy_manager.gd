@@ -51,7 +51,7 @@ func _on_timer_timeout() -> void:
 	if player == null:
 		return
 	
-	for i in number_to_spawn:
+	for i in (number_to_spawn + 1):
 		var enemy_scene = enemy_table.pick_item()
 		var enemy = enemy_scene.instantiate() as Node2D
 		
@@ -76,5 +76,5 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	elif arena_difficulty == 191:
 		enemy_table.add_item(crocodile_scene, 30)
 	
-	if (arena_difficulty % 18) == 0:
+	if (arena_difficulty % 6) == 0:
 		number_to_spawn += 1
