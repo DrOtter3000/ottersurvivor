@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://t5el07rtboaj"]
+[gd_scene load_steps=7 format=3 uid="uid://t5el07rtboaj"]
 
 [ext_resource type="Script" path="res://scenes/manager/enemy_manager.gd" id="1_61q35"]
 [ext_resource type="PackedScene" uid="uid://bwu1fexk2f0bp" path="res://scenes/game_object/duck/duck.tscn" id="2_2mv41"]
 [ext_resource type="PackedScene" uid="uid://0p00jk51x6re" path="res://scenes/game_object/rat/rat.tscn" id="3_7uj3l"]
 [ext_resource type="PackedScene" uid="uid://3dtum6pixjcv" path="res://scenes/game_object/fox/fox.tscn" id="4_5l2fr"]
 [ext_resource type="PackedScene" uid="uid://bk0cphw5bmf08" path="res://scenes/game_object/crocodile/crocodile.tscn" id="4_6evrb"]
+[ext_resource type="PackedScene" uid="uid://c065tl20pj5q5" path="res://scenes/game_object/gull/gull.tscn" id="6_0dqnt"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_61q35")
@@ -12,6 +13,7 @@ duck_scene = ExtResource("2_2mv41")
 rat_scene = ExtResource("3_7uj3l")
 fox_scene = ExtResource("4_5l2fr")
 crocodile_scene = ExtResource("4_6evrb")
+gull_scene = ExtResource("6_0dqnt")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

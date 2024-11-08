@@ -79,14 +79,13 @@ resource_local_to_scene = true
 shader = ExtResource("6_1vkt7")
 shader_parameter/lerp_percent = 0.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_27pkf"]
-radius = 5.28123
+[sub_resource type="CircleShape2D" id="CircleShape2D_hso5x"]
+radius = 5.69397
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_id727"]
-radius = 2.68694
-height = 23.0737
+[sub_resource type="CircleShape2D" id="CircleShape2D_lhpeq"]
+radius = 3.54185
 
-[node name="Crocodile" type="CharacterBody2D" groups=["enemy"]]
+[node name="Fox" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 8
 collision_mask = 9
 script = ExtResource("1_pa7mo")
@@ -101,7 +100,7 @@ autoplay = "default"
 max_health = 60.0
 
 [node name="VelocityComponent" parent="." instance=ExtResource("3_4hdvl")]
-max_speed = 60
+max_speed = 80
 acceleration = 1.0
 
 [node name="ClamDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_bc2qr")]
@@ -131,9 +130,9 @@ health_component = NodePath("../HealthComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
 position = Vector2(0, -5.78123)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_27pkf")
+shape = SubResource("CircleShape2D_hso5x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4.42)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_id727")
+shape = SubResource("CircleShape2D_lhpeq")

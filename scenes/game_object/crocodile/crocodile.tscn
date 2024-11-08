@@ -55,12 +55,11 @@ resource_local_to_scene = true
 shader = ExtResource("6_rq8ks")
 shader_parameter/lerp_percent = 0.0
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_27pkf"]
-radius = 5.28123
+[sub_resource type="CircleShape2D" id="CircleShape2D_8wvhf"]
+radius = 5.55858
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_id727"]
-radius = 2.68694
-height = 23.0737
+[sub_resource type="CircleShape2D" id="CircleShape2D_kgmlb"]
+radius = 3.47579
 
 [node name="Crocodile" type="CharacterBody2D" groups=["enemy"]]
 collision_layer = 8
@@ -107,9 +106,9 @@ health_component = NodePath("../HealthComponent")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBoxComponent"]
 position = Vector2(0, -5.78123)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_27pkf")
+shape = SubResource("CircleShape2D_8wvhf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4.42)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_id727")
+shape = SubResource("CircleShape2D_kgmlb")
