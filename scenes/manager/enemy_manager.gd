@@ -13,6 +13,7 @@ const SPAWN_RADIUS = 400
 
 var base_spawn_time = 0
 var enemy_table = WeightedTable.new()
+var number_to_spawn = 0
 
 
 func _ready() -> void:
@@ -50,13 +51,13 @@ func _on_timer_timeout() -> void:
 	if player == null:
 		return
 	
-	
-	var enemy_scene = enemy_table.pick_item()
-	var enemy = enemy_scene.instantiate() as Node2D
-	
-	var entities_layer = get_tree().get_first_node_in_group("entities_layer")
-	entities_layer.add_child(enemy)
-	enemy.global_position = get_spawn_position()
+	for i in number_to_spawn:
+		var enemy_scene = enemy_table.pick_item()
+		var enemy = enemy_scene.instantiate() as Node2D
+		
+		var entities_layer = get_tree().get_first_node_in_group("entities_layer")
+		entities_layer.add_child(enemy)
+		enemy.global_position = get_spawn_position()
 
 
 func on_arena_difficulty_increased(arena_difficulty: int):
@@ -74,3 +75,6 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 		enemy_table.add_item(fox_scene, 25)
 	elif arena_difficulty == 191:
 		enemy_table.add_item(crocodile_scene, 30)
+	
+	if (arena_difficulty % 1) == 0:
+		number_to_spawn += 1
