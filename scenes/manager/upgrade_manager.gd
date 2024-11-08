@@ -16,12 +16,11 @@ var upgrade_stone_count = preload("res://resources/upgrades/stone_count.tres")
 
 
 func _ready() -> void:
-	upgrade_pool.add_item(upgrade_tail, 10)
-	upgrade_pool.add_item(upgrade_stone, 100000000)
+	upgrade_pool.add_item(upgrade_tail, 5)
+	upgrade_pool.add_item(upgrade_stone, 5)
 	upgrade_pool.add_item(upgrade_scratch_rate, 10)
 	upgrade_pool.add_item(upgrade_scratch_damage, 10)
 	upgrade_pool.add_item(upgrade_player_speed, 5)
-	upgrade_pool.add_item(upgrade_stone_count, 1000000000)
 	
 	experience_manager.level_up.connect(on_level_up)
 
@@ -48,7 +47,8 @@ func apply_upgrade(upgrade: AbilityUpgrade):
 func update_upgrade_pool(chosen_upgrade: AbilityUpgrade):
 	if chosen_upgrade.id == upgrade_tail.id:
 		upgrade_pool.add_item(upgrade_tail_damage, 10)
-
+	elif chosen_upgrade.id == upgrade_stone.id:
+		upgrade_pool.add_item(upgrade_stone_count, 5)
 
 func pick_upgrades():
 	var chosen_upgrades: Array[AbilityUpgrade] = []
