@@ -76,5 +76,5 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	elif arena_difficulty == 191:
 		enemy_table.add_item(crocodile_scene, 30)
 	
-	if (arena_difficulty % 1) == 0:
+	if (arena_difficulty % 18) == 0:
 		number_to_spawn += 1
