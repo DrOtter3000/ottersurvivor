@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://bys4xrfb5gxlj"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_wx50h"]
+
+[resource]
+script = ExtResource("1_wx50h")
+id = "health_regeneration"
+max_quantity = 2
+clam_cost = 750
+title = "Healthy Otter"
+description = "Only eatin' the healthy stuff making otter regen life weeeewwwwy fast."

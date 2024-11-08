@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://md0sskn5o0vy"]
+
+[ext_resource type="Script" path="res://scenes/ability/stone_ability_controller/stone_ability_controller.gd" id="1_vl3e5"]
+[ext_resource type="PackedScene" uid="uid://bsfmqvrcexcop" path="res://scenes/ability/stone_ability/stone_ability.tscn" id="2_cfb0a"]
+
+[node name="StoneAbilityController" type="Node"]
+script = ExtResource("1_vl3e5")
+stone_scene = ExtResource("2_cfb0a")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

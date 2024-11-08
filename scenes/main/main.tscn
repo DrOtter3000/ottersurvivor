@@ -51,8 +51,9 @@ layer_0/tile_data = PackedInt32Array(0, 0, 2, 1, 0, 1, 65537, 0, 0, 65538, 0, 2,
 [node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
 y_sort_enabled = true
 
-[node name="Player" parent="Entities" instance=ExtResource("1_ngtwe")]
+[node name="Player" parent="Entities" node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_ngtwe")]
 position = Vector2(50.8542, 51.3839)
 collision_mask = 3
+arena_time_manager = NodePath("../../ArenaTimeManager")
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]
