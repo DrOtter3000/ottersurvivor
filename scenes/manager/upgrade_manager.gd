@@ -12,14 +12,16 @@ var upgrade_tail = preload("res://resources/upgrades/tail.tres")
 var upgrade_tail_damage = preload("res://resources/upgrades/tail_damage.tres")
 var upgrade_player_speed = preload("res://resources/upgrades/player_speed.tres")
 var upgrade_stone = preload("res://resources/upgrades/stone.tres")
+var upgrade_stone_count = preload("res://resources/upgrades/stone_count.tres")
 
 
 func _ready() -> void:
 	upgrade_pool.add_item(upgrade_tail, 10)
-	upgrade_pool.add_item(upgrade_stone, 10)
+	upgrade_pool.add_item(upgrade_stone, 100000000)
 	upgrade_pool.add_item(upgrade_scratch_rate, 10)
 	upgrade_pool.add_item(upgrade_scratch_damage, 10)
 	upgrade_pool.add_item(upgrade_player_speed, 5)
+	upgrade_pool.add_item(upgrade_stone_count, 1000000000)
 	
 	experience_manager.level_up.connect(on_level_up)
 
