@@ -3,7 +3,8 @@ extends CanvasLayer
 signal upgrade_selected(upgrade: AbilityUpgrade)
 
 @export var upgrade_card_scene: PackedScene
-@onready var card_container: HBoxContainer = $MarginContainer/CardContainer
+@onready var card_container: HBoxContainer = $MarginContainer/VBoxContainer/CardContainer
+
 
 
 func _ready() -> void:
