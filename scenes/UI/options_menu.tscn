@@ -89,9 +89,22 @@ text = "Window Mode"
 [node name="WindowButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/WindowOptionContainer" instance=ExtResource("3_1wk5w")]
 layout_mode = 2
 
+[node name="VsyncContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/VsyncContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "VSYNC"
+
+[node name="VsyncBox" type="CheckBox" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/VsyncContainer"]
+layout_mode = 2
+button_pressed = true
+
 [node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("3_1wk5w")]
 layout_mode = 2
 text = "Back"
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/WindowOptionContainer/WindowButton" to="." method="_on_window_button_pressed"]
+[connection signal="toggled" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/VsyncContainer/VsyncBox" to="." method="_on_vsync_box_toggled"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/BackButton" to="." method="_on_back_button_pressed"]
