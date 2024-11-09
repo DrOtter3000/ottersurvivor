@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://basle2h6s5t1g"]
+
+[ext_resource type="Script" path="res://scenes/ability/bite_ability_controller/bite_ability_controller.gd" id="1_opu17"]
+[ext_resource type="PackedScene" uid="uid://c3pa6mof15ry2" path="res://scenes/ability/bite_ability/bite_ability.tscn" id="2_8wicb"]
+
+[node name="BiteAbilityController" type="Node"]
+script = ExtResource("1_opu17")
+bite_ability = ExtResource("2_8wicb")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
