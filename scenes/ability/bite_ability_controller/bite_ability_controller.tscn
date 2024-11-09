@@ -8,7 +8,7 @@ script = ExtResource("1_opu17")
 bite_ability = ExtResource("2_8wicb")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 2.5
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

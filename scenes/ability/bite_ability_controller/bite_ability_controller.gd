@@ -5,8 +5,7 @@ const MAX_RANGE = 150
 @export var bite_ability: PackedScene
 @onready var timer: Timer = $Timer
 
-var base_damage := 50
-var additional_damage_percent := 1.0
+var base_damage := 75
 var base_wait_time
 
 
@@ -36,6 +35,6 @@ func _on_timer_timeout() -> void:
 	var bite_instance = bite_ability.instantiate() as BiteAbility
 	var foreground_layer = get_tree().get_first_node_in_group("foreground_layer")
 	foreground_layer.add_child(bite_instance)
-	bite_instance.hitbox_component.damage = base_damage * additional_damage_percent
+	bite_instance.hitbox_component.damage = base_damage
 	
 	bite_instance.global_position = enemies[0].global_position

@@ -13,11 +13,13 @@ var upgrade_tail_damage = preload("res://resources/upgrades/tail_damage.tres")
 var upgrade_player_speed = preload("res://resources/upgrades/player_speed.tres")
 var upgrade_stone = preload("res://resources/upgrades/stone.tres")
 var upgrade_stone_count = preload("res://resources/upgrades/stone_count.tres")
+var upgrade_bite = preload("res://resources/upgrades/bite.tres")
 
 
 func _ready() -> void:
 	upgrade_pool.add_item(upgrade_tail, 5)
 	upgrade_pool.add_item(upgrade_stone, 5)
+	upgrade_pool.add_item(upgrade_bite, 2)
 	upgrade_pool.add_item(upgrade_scratch_rate, 10)
 	upgrade_pool.add_item(upgrade_scratch_damage, 10)
 	upgrade_pool.add_item(upgrade_player_speed, 5)
