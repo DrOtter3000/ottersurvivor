@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bljvd7ne2arbj"]
+[gd_scene load_steps=6 format=3 uid="uid://bljvd7ne2arbj"]
 
 [ext_resource type="Script" path="res://scenes/UI/main_menu.gd" id="1_2e0ej"]
 [ext_resource type="TileSet" uid="uid://bc6e1mp8ulyxm" path="res://resources/tileset.tres" id="1_agb0g"]
 [ext_resource type="PackedScene" uid="uid://dqih6ahlrqv4t" path="res://scenes/UI/sound_button.tscn" id="2_dwufk"]
 [ext_resource type="PackedScene" uid="uid://cdx56myuv2y05" path="res://scenes/UI/crt_effect.tscn" id="2_i1sss"]
+[ext_resource type="FontFile" uid="uid://b2fur0rawmyv5" path="res://resources/theme/monofonto/MONOFONT.TTF" id="5_7r4fv"]
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_2e0ej")
@@ -73,6 +74,20 @@ text = "Options"
 [node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_dwufk")]
 layout_mode = 2
 text = "Quit"
+
+[node name="VersionLabel" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -15.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("5_7r4fv")
+theme_override_font_sizes/font_size = 20
+text = "Version 0.1.1 (beta)"
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MetaButton" to="." method="_on_meta_button_pressed"]
