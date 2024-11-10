@@ -128,6 +128,7 @@ acceleration = 25.0
 
 [node name="RandomStreamPlayer2DComponent" type="AudioStreamPlayer2D" parent="."]
 volume_db = -4.0
+bus = &"SFX"
 script = ExtResource("5_4dcm8")
 streams = Array[AudioStream]([ExtResource("6_iw0yl")])
 
