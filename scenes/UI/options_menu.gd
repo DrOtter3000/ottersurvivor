@@ -9,6 +9,11 @@ signal back_pressed
 
 
 func _ready() -> void:
+	if MetaProgression.save_setting_values["vsync"]:
+		vsync_box.button_pressed = true
+	else:
+		vsync_box.button_pressed = false
+	
 	sfx_slider.value_changed.connect(on_audio_slider_changed.bind("SFX"))
 	music_slider.value_changed.connect(on_audio_slider_changed.bind("Music"))
 	update_display()
@@ -54,6 +59,10 @@ func on_audio_slider_changed(value: float, bus_name: String):
 
 func _on_vsync_box_toggled(toggled_on: bool) -> void:
 	if toggled_on:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
+		MetaProgression.save_setting_values["vsync"] = true
 	else:
-		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+		MetaProgression.save_setting_values["vsync"] = false
+	
+	MetaProgression.upgrade_settings()
+	
+	MetaProgression.save_settings()

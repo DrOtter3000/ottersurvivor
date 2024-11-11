@@ -4,6 +4,10 @@ var options_scene = preload("res://scenes/UI/options_menu.tscn")
 @onready var quit_button: Button = $MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/QuitButton
 
 
+func _ready() -> void:
+	MetaProgression.upgrade_settings()
+
+
 func _on_play_button_pressed() -> void:
 	ScreenTransition.transition()
 	await ScreenTransition.transitioned_halfway

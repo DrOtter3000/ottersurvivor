@@ -99,7 +99,6 @@ text = "VSYNC"
 
 [node name="VsyncBox" type="CheckBox" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/VBoxContainer/VsyncContainer"]
 layout_mode = 2
-button_pressed = true
 
 [node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("3_1wk5w")]
 layout_mode = 2
