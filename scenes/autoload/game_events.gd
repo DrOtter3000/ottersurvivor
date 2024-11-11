@@ -24,5 +24,5 @@ func emit_player_damaged():
 	player_damaged.emit()
 
 
-func _process(delta: float) -> void:
-	print(DisplayServer.window_get_vsync_mode())
+#func _process(delta: float) -> void:
+	#print(DisplayServer.window_get_vsync_mode())

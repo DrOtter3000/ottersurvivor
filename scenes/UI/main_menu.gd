@@ -6,6 +6,7 @@ var options_scene = preload("res://scenes/UI/options_menu.tscn")
 
 func _ready() -> void:
 	MetaProgression.upgrade_settings()
+	MusicPlayer.play()
 
 
 func _on_play_button_pressed() -> void:

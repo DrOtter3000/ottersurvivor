@@ -9,8 +9,8 @@ var save_data: Dictionary = {
 }
 
 var save_setting_values: Dictionary = {
-	"sfx": 0,
-	"music": 0,
+	"SFX": .75,
+	"Music": .75,
 	"vsync": false,
 	"fullscreen": true
 }
@@ -34,6 +34,9 @@ func load_settings():
 		return
 	var file = FileAccess.open(SAVE_SETTINGS_PATH, FileAccess.READ)
 	save_setting_values = file.get_var()
+	
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(save_setting_values["SFX"]))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(save_setting_values["Music"]))
 
 
 func upgrade_settings():
@@ -41,6 +44,9 @@ func upgrade_settings():
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+	
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(save_setting_values["SFX"]))
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(save_setting_values["Music"]))
 
 
 func save():

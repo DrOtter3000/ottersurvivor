@@ -37,6 +37,10 @@ func set_bus_volume_percent(bus_name: String, percent: float):
 	var bus_index = AudioServer.get_bus_index(bus_name)
 	var volume_db = linear_to_db(percent)
 	AudioServer.set_bus_volume_db(bus_index, volume_db)
+	MetaProgression.save_setting_values[bus_name] = percent
+	MetaProgression.save_settings()
+
+	
 
 
 func _on_window_button_pressed() -> void:
