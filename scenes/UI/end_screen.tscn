@@ -92,10 +92,12 @@ script = ExtResource("1_8w21k")
 [node name="VictoryScreenPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_t3l70")
 volume_db = -5.0
+bus = &"SFX"
 
 [node name="DefeatScreenPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_gspr7")
 volume_db = -5.0
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

@@ -11,5 +11,6 @@
 
 [node name="RandomStreamPlayer2DComponent" type="AudioStreamPlayer2D"]
 volume_db = -8.0
+bus = &"SFX"
 script = ExtResource("1_aq100")
 streams = Array[AudioStream]([ExtResource("2_ge7uh"), ExtResource("3_o7s7g"), ExtResource("4_kdet4"), ExtResource("5_nh6m6"), ExtResource("6_tmu6t"), ExtResource("7_c7wmy"), ExtResource("8_6u5yr")])
