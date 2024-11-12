@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Ability" load_steps=3 format=3 uid="uid://3w86hutcnath"]
+
+[ext_resource type="PackedScene" uid="uid://d36lt7aauhfcy" path="res://scenes/ability/stomp_ability_controller/stomp_ability_controller.tscn" id="1_r5dmc"]
+[ext_resource type="Script" path="res://resources/upgrades/ability.gd" id="2_g87gm"]
+
+[resource]
+script = ExtResource("2_g87gm")
+ability_controller_scene = ExtResource("1_r5dmc")
+id = "stomp"
+max_quantity = 1
+name = "Stomp"
+description = "Angry stompin otter shaking earth. Enemies take damages!"

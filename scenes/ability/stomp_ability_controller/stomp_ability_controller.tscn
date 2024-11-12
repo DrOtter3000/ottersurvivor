@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://d36lt7aauhfcy"]
+
+[ext_resource type="Script" path="res://scenes/ability/stomp_ability_controller/stomp_ability_controller.gd" id="1_ndvvf"]
+[ext_resource type="PackedScene" uid="uid://dtpuioexnm358" path="res://scenes/ability/stomp_ability/stomp_ability.tscn" id="2_qjily"]
+
+[node name="StompAbilityController" type="Node"]
+script = ExtResource("1_ndvvf")
+stomp_ability = ExtResource("2_qjily")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
