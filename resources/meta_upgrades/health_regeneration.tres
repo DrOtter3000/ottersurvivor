@@ -6,6 +6,6 @@
 script = ExtResource("1_wx50h")
 id = "health_regeneration"
 max_quantity = 2
-clam_cost = 750
+clam_cost = 1
 title = "Healthy Otter"
 description = "Only eatin' the healthy stuff making otter regen life weeeewwwwy fast."
