@@ -12,7 +12,7 @@ var save_setting_values: Dictionary = {
 	"SFX": .75,
 	"Music": .75,
 	"vsync": false,
-	"fullscreen": true
+	"Fullscreen": true
 }
 
 
@@ -20,6 +20,7 @@ func _ready() -> void:
 	GameEvents.clam_collected.connect(on_clam_collected)
 	load_save_file()
 	load_settings()
+
 
 
 func load_save_file():
@@ -47,6 +48,11 @@ func upgrade_settings():
 	
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(save_setting_values["SFX"]))
 	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(save_setting_values["Music"]))
+	
+	if save_setting_values["Fullscreen"]:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 
 
 func save():

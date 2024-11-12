@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://b2fur0rawmyv5" path="res://resources/theme/monofonto/MONOFONT.TTF" id="5_7r4fv"]
 
 [node name="MainMenu" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_2e0ej")
 
 [node name="CRT-Effect" parent="." instance=ExtResource("2_i1sss")]

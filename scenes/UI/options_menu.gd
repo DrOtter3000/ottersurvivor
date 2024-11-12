@@ -40,15 +40,13 @@ func set_bus_volume_percent(bus_name: String, percent: float):
 	MetaProgression.save_setting_values[bus_name] = percent
 	MetaProgression.save_settings()
 
-	
-
 
 func _on_window_button_pressed() -> void:
-	var mode = DisplayServer.window_get_mode()
-	if mode != DisplayServer.WINDOW_MODE_FULLSCREEN:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
-	else:
-		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	MetaProgression.save_setting_values["Fullscreen"] = !MetaProgression.save_setting_values["Fullscreen"]
+	
+	MetaProgression.save_settings()
+	
+	MetaProgression.upgrade_settings()
 	
 	update_display()
 
