@@ -34,5 +34,5 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Diction
 		var percent_reduction = current_upgrades["stomp_rate"]["quantity"] * .1
 		timer.wait_time = base_wait_time * (1 - percent_reduction)
 		timer.start()
-	elif upgrade.id == "scratch_damage":
+	elif upgrade.id == "stomp_damage":
 		additional_damage_percent = 1 + (current_upgrades["stomp_damage"]["quantity"] * .25)
