@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://cjqgc4xkv0o4"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_jv00r"]
+
+[resource]
+script = ExtResource("1_jv00r")
+id = "stomp_rate"
+max_quantity = 2
+name = "Stomp Rate"
+description = "Faster stomp make faster ouchies!
+(Attack Rate + 10%)"
