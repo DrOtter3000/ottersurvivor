@@ -4,6 +4,9 @@ signal clam_collected(number: float)
 signal ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary)
 signal player_damaged
 
+var enemies_on_field := 0
+var max_enemies := 250
+
 
 func _ready() -> void:
 	if MetaProgression.save_setting_values["vsync"] == true:

@@ -35,4 +35,5 @@ func get_health_percent():
 func check_death():
 	if current_health == 0:
 		died.emit()
+		GameEvents.enemies_on_field -= 1
 		owner.queue_free()
