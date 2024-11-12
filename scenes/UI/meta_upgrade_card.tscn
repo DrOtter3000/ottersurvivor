@@ -199,7 +199,7 @@ show_percentage = false
 layout_mode = 2
 mouse_filter = 1
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Control"]
+[node name="ClamTexture" type="TextureRect" parent="MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Control"]
 layout_mode = 2
 offset_left = -9.17855
 offset_top = -3.64925

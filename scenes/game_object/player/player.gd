@@ -97,10 +97,3 @@ func _on_arena_difficulty_increased(difficulty: int):
 	if quantity == 2:
 		if difficulty % 4 == 0:
 			health_component.heal(1)
-
-	#var health_regeneration_quantity = MetaProgression.get_upgrade_count("health_regeneration")
-
-	#if health_regeneration_quantity > 0:
-		#var is_thirty_second_intervall = (difficulty % 6) == 0
-		#if is_thirty_second_intervall:
-			#health_component.heal(health_regeneration_quantity)

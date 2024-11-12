@@ -7,6 +7,7 @@ extends PanelContainer
 @onready var purchase_button: Button = $MarginContainer/VBoxContainer/PurchaseButton
 @onready var count_label: Label = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/CountLabel
 @onready var progress_label: Label = $MarginContainer/VBoxContainer/VBoxContainer/HBoxContainer/ProgressLabel
+@onready var clam_texture: TextureRect = $MarginContainer/VBoxContainer/VBoxContainer/MarginContainer/Control/ClamTexture
 
 
 var upgrade: MetaUpgrade
@@ -36,6 +37,9 @@ func update_progress():
 	purchase_button.disabled = percent < 1 || is_maxed
 	if is_maxed:
 		purchase_button.text = "max"
+		progress_label.visible = false
+		progress_bar.visible = false
+		clam_texture.visible = false
 	progress_label.text = str(currency) + "/" + str(upgrade.clam_cost)
 	count_label.text = str(current_quantity) + "/" + str(upgrade.max_quantity)
 
