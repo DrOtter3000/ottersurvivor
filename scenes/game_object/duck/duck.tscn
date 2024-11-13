@@ -113,7 +113,6 @@ health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
 
 [node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("10_pkpa8")]
-bus = &"SFX"
 
 [node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_520cp")]
 health_component = NodePath("../HealthComponent")
