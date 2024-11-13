@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://bys4xrfb5gxlj"]
+
+[ext_resource type="Script" path="res://resources/meta_upgrades/meta_upgrade.gd" id="1_x2ijj"]
+
+[resource]
+script = ExtResource("1_x2ijj")
+id = "long_arms"
+max_quantity = 4
+clam_cost = 1
+title = "Long Arms"
+description = "Otter has made a lot of stretchies and can reach clams far far aways.
+
+(Clam Collection Radius +25%)"

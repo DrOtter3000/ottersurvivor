@@ -1,7 +1,11 @@
 extends Node2D
 
+@onready var area_2d: Area2D = $Area2D
+
 
 func _ready() -> void:
+	var arm_length = MetaProgression.get_upgrade_count("long_arms")
+	area_2d.scale *= 1 + (arm_length * .25)
 	rotation_degrees = randi_range(0, 360)
 
 
