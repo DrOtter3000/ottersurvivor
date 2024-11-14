@@ -43,6 +43,7 @@ Your feedback and support are crucial to the development of **Otter Survivor**! 
 
 ## Contact and Updates
 To stay up-to-date on the latest news about **Otter Survivor**, follow me on:
+- **Itch** [https://drotter3000.itch.io/otter-survivor]
 - **Mastodon:** [https://mastodon.gamedev.place/@drotter3000]
 - **Bluesky:** [https://bsky.app/profile/drotter3000.darknet-online.com]
 - **Twitter/X:** [https://x.com/DrOtter3000]
