@@ -8,4 +8,6 @@ id = "health_regeneration"
 max_quantity = 2
 clam_cost = 750
 title = "Healthy Otter"
-description = "Only eatin' the healthy stuff making otter regen life weeeewwwwy fast."
+description = "Only eatin' the healthy stuff making otter regen life weeeewwwwy fast.
+
+(Regenerate health over time)"
