@@ -26,7 +26,7 @@ func _ready() -> void:
 	upgrade_pool.add_item(upgrade_scratch_rate, 10)
 	upgrade_pool.add_item(upgrade_scratch_damage, 10)
 	upgrade_pool.add_item(upgrade_player_speed, 5)
-	upgrade_pool.add_item(upgrade_stomp, 50000)
+	upgrade_pool.add_item(upgrade_stomp, 5)
 	
 	experience_manager.level_up.connect(on_level_up)
 

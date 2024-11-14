@@ -6,7 +6,7 @@
 script = ExtResource("1_x2ijj")
 id = "long_arms"
 max_quantity = 4
-clam_cost = 1
+clam_cost = 500
 title = "Long Arms"
 description = "Otter has made a lot of stretchies and can reach clams far far aways.
 
