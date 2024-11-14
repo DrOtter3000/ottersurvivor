@@ -93,7 +93,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("5_7r4fv")
 theme_override_font_sizes/font_size = 20
-text = "Version 0.2.0 (beta)"
+text = "Version 1.0.0"
 
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/MetaButton" to="." method="_on_meta_button_pressed"]
