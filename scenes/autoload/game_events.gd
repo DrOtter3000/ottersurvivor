@@ -5,7 +5,7 @@ signal ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictiona
 signal player_damaged
 
 var enemies_on_field := 0
-var max_enemies := 500
+var max_enemies := 550
 
 
 func _ready() -> void:

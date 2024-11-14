@@ -78,7 +78,7 @@ max_health = 25.0
 
 [node name="VelocityComponent" parent="." instance=ExtResource("3_rj2uw")]
 max_speed = 150
-acceleration = 0.1
+acceleration = 0.8
 
 [node name="ClamDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_361eg")]
 drop_percent = 0.1
