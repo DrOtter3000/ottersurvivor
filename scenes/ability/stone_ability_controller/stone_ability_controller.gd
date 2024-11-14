@@ -1,7 +1,7 @@
 extends Node
 
-@export var base_range := 240
-@export var base_damage := 20
+@export var base_range := 256
+@export var base_damage := 25
 @export var stone_scene: PackedScene
 
 var stone_count := 0

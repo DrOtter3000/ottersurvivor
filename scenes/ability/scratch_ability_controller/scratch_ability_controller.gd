@@ -5,7 +5,7 @@ const MAX_RANGE = 150
 @export var scratch_ability: PackedScene
 @onready var timer: Timer = $Timer
 
-var base_damage := 5
+var base_damage := 10
 var additional_damage_percent := 1.0
 var base_wait_time
 

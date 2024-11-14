@@ -5,7 +5,7 @@ const MAX_RANGE = 150
 @export var bite_ability: PackedScene
 @onready var timer: Timer = $Timer
 
-var base_damage := 75
+var base_damage := 100
 var base_wait_time
 
 

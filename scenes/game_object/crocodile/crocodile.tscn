@@ -77,11 +77,10 @@ autoplay = "default"
 max_health = 120.0
 
 [node name="VelocityComponent" parent="." instance=ExtResource("3_bqt63")]
-max_speed = 30
+max_speed = 60
 acceleration = 1.0
 
 [node name="ClamDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_a5irm")]
-drop_percent = 0.15
 health_component = NodePath("../HealthComponent")
 
 [node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_yspln")]
@@ -94,7 +93,6 @@ health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
 
 [node name="RandomStreamPlayer2DComponent" parent="." instance=ExtResource("8_08ryr")]
-bus = &"SFX"
 
 [node name="Visuals" type="Node2D" parent="."]
 

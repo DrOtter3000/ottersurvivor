@@ -17,7 +17,7 @@ var number_to_spawn = 0
 
 
 func _ready() -> void:
-	enemy_table.add_item(duck_scene, 5)
+	enemy_table.add_item(duck_scene, 10)
 	base_spawn_time = timer.wait_time
 	arena_time_manager.arena_difficulty_increased.connect(on_arena_difficulty_increased)
 
@@ -70,15 +70,15 @@ func on_arena_difficulty_increased(arena_difficulty: int):
 	timer.wait_time = base_spawn_time - time_off
 	
 	if arena_difficulty == 27:
-		enemy_table.add_item(rat_scene, 10)
+		enemy_table.add_item(rat_scene, 15)
 	elif arena_difficulty == 59:
-		enemy_table.add_item(crab_scene, 15)
+		enemy_table.add_item(crab_scene, 20)
 	elif arena_difficulty == 87:
 		enemy_table.add_item(gull_scene, 15)
 	elif arena_difficulty == 119:
-		enemy_table.add_item(fox_scene, 25)
+		enemy_table.add_item(fox_scene, 20)
 	elif arena_difficulty == 150:
-		enemy_table.add_item(crocodile_scene, 30)
+		enemy_table.add_item(crocodile_scene, 15)
 		
 		
 	if (arena_difficulty % 30) == 0:

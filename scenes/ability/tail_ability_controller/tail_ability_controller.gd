@@ -3,7 +3,7 @@ extends Node
 
 @export var tail_ability_scene: PackedScene
 
-var base_damage := 10
+var base_damage := 7
 var additional_damage_percent := 1.0
 
 

@@ -117,7 +117,7 @@ value = 0.5
 show_percentage = false
 
 [node name="VelocityComponent" parent="." instance=ExtResource("2_nkhdg")]
-max_speed = 90
+max_speed = 75
 acceleration = 25.0
 
 [node name="HealthComponent" parent="." instance=ExtResource("2_syr0e")]

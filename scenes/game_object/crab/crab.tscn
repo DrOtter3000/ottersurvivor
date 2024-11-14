@@ -74,14 +74,13 @@ libraries = {
 autoplay = "default"
 
 [node name="HealthComponent" parent="." instance=ExtResource("1_j5wua")]
-max_health = 30.0
+max_health = 44.0
 
 [node name="VelocityComponent" parent="." instance=ExtResource("2_4o0ay")]
-max_speed = 60
-acceleration = 2.0
+max_speed = 50
 
 [node name="ClamDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_i4xbr")]
-drop_percent = 0.35
+drop_percent = 0.2
 health_component = NodePath("../HealthComponent")
 
 [node name="HitFlashComponent" parent="." node_paths=PackedStringArray("health_component", "sprite") instance=ExtResource("5_f21vx")]
