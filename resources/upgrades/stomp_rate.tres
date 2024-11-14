@@ -8,4 +8,5 @@ id = "stomp_rate"
 max_quantity = 2
 name = "Stomp Rate"
 description = "Faster stomp make faster ouchies!
+
 (Attack Rate + 10%)"

@@ -9,4 +9,6 @@ ability_controller_scene = ExtResource("1_shcet")
 id = "bite"
 max_quantity = 1
 name = "Bite"
-description = "Wow!!! Otter using strong bite attack. It so hard, killing most with omly one bites!"
+description = "Wow!!! Otter using strong bite attack. It so hard, killing most with omly one bites!
+
+(One hard attack with giant damage)"

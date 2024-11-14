@@ -7,4 +7,6 @@ script = ExtResource("1_27lua")
 id = "stone_count"
 max_quantity = 5
 name = "Adwanced Stone Mamagmemt"
-description = "Smart Otter, throw more stone!!!"
+description = "Smart Otter, throw more stone!!!
+
+(Stones +1)"

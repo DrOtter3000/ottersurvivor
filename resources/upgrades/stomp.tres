@@ -9,4 +9,6 @@ ability_controller_scene = ExtResource("1_r5dmc")
 id = "stomp"
 max_quantity = 1
 name = "Stomp"
-description = "Angry stompin otter shaking earth. Enemies take damages!"
+description = "Angry stompin otter shaking earth. Enemies take damages!
+
+(Little damage, but area of effect)"

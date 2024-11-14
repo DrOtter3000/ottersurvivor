@@ -9,4 +9,6 @@ ability_controller_scene = ExtResource("1_dp5wg")
 id = "tail"
 max_quantity = 1
 name = "Tail Punch"
-description = "Omter strikes his enemies down, with a single strike of its mighty tail!"
+description = "Otter strikes his enemies down, with a single strike of mighty tail!
+
+(Moderate damage in moderate radius)"

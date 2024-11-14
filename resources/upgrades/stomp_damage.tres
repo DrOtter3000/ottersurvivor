@@ -8,4 +8,5 @@ id = "stomp_damage"
 max_quantity = 2
 name = "Stomp Damage"
 description = "Harder stomp make harder ouchies!
+
 (Stomp Attack Damage + 25%)"

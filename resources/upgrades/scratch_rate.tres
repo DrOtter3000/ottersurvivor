@@ -5,6 +5,8 @@
 [resource]
 script = ExtResource("1_h5jj0")
 id = "scratch_rate"
-max_quantity = 5
+max_quantity = 6
 name = "More Scratchies"
-description = "Otter scratches faster, perhaps faster than any other otter before him!"
+description = "Otter scratches faster, perhaps faster than any otter before!
+
+(Scratch rate +10%)"

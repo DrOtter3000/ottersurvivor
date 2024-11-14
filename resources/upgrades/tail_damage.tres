@@ -7,4 +7,6 @@ script = ExtResource("1_gp22m")
 id = "tail_damage"
 max_quantity = 0
 name = "Stronger Tail"
-description = "Otter trained a lot. Now tail beats much harder. *squeek*"
+description = "Otter trained a lot. Now tail beats much harder. *squeek*
+
+(Tail Damage +20%)"

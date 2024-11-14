@@ -29,4 +29,4 @@ func _on_timer_timeout() -> void:
 
 func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades: Dictionary):
 	if upgrade.id == "tail_damage":
-		additional_damage_percent = 1 + (current_upgrades["tail_damage"]["quantity"] * .1)
+		additional_damage_percent = 1 + (current_upgrades["tail_damage"]["quantity"] * .20)

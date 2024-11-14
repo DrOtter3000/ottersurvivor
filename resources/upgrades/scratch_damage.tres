@@ -7,4 +7,6 @@ script = ExtResource("1_0sgww")
 id = "scratch_damage"
 max_quantity = 0
 name = "Sharper Scratchies"
-description = "Make Otter sharpen its claws. Now more deadly."
+description = "Make Otter sharpen its claws. Now more deadly.
+
+(Scratch Damage +15%)"
