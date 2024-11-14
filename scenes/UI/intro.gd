@@ -9,3 +9,7 @@ func start_game() -> void:
 
 func change_title() -> void:
 	$AudioStreamPlayer.stream = load("res://assets/audio/AC_Cute_Chirpy_05.wav")
+
+
+func play_music():
+	MusicPlayer.play()
