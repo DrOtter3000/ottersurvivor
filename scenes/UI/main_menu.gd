@@ -37,3 +37,9 @@ func _on_meta_button_pressed() -> void:
 	ScreenTransition.transition()
 	await ScreenTransition.transitioned_halfway
 	get_tree().change_scene_to_file("res://scenes/UI/meta_menu.tscn")
+
+
+func _on_credits_menu_pressed() -> void:
+	ScreenTransition.transition()
+	await ScreenTransition.transitioned_halfway
+	get_tree().change_scene_to_file("res://scenes/UI/credits.tscn")
