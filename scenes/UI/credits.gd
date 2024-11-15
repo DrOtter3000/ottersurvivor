@@ -4,7 +4,7 @@ extends CanvasLayer
 
 
 func _process(delta: float) -> void:
-	credits.position.y -= .045
+	credits.position.y -= 25 * delta
 
 
 func quit():

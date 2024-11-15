@@ -11,7 +11,6 @@ func _ready() -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		DisplayServer.window_get_mode()
 		MetaProgression.save_settings()
-	print(GameEvents.max_enemies)
 
 
 func _on_play_button_pressed() -> void:
