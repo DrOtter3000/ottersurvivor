@@ -5,11 +5,13 @@ var options_scene = preload("res://scenes/UI/options_menu.tscn")
 
 
 func _ready() -> void:
+	GameEvents.enemies_on_field = 0
 	MetaProgression.upgrade_settings()
 	if MetaProgression.save_setting_values["Fullscreen"] == true:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 		DisplayServer.window_get_mode()
 		MetaProgression.save_settings()
+	print(GameEvents.max_enemies)
 
 
 func _on_play_button_pressed() -> void:
